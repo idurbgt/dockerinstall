@@ -1,11 +1,7 @@
 #!/bin/bash
 # ============================================================
-# Script: setup-docker-xampp-honeygain.sh
-# Tujuan: 
-#  1. Instal Docker (root only)
-#  2. Menambahkan autostart untuk XAMPP (systemd service)
-#  3. Menjalankan container Honeygain secara otomatis
-# ============================================================
+# Script: xampp-honeygain.sh
+=====
 
 set -e
 
