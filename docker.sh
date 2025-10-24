@@ -2,7 +2,7 @@
 # ============================================
 # Script: install_docker_root_only.sh
 # Tujuan: Instalasi Docker Engine di Ubuntu 20.04.4 LTS
-#         (hanya root yang dapat menjalankan docker)
+# (hanya root yang dapat menjalankan docker) + fungsi tambahan Honeygain
 # ============================================
 
 set -e
@@ -50,6 +50,18 @@ systemctl status docker --no-pager
 echo
 echo "=== Instalasi Docker selesai ==="
 echo "Gunakan perintah berikut untuk menguji:"
-echo "    docker run hello-world"
+echo "  docker run hello-world"
 echo
 echo "Catatan: hanya root yang dapat menjalankan Docker."
+
+### --- Tambahan: menjalankan Honeygain container ---
+echo
+echo "==> Fungsi tambahan: pull & run Honeygain"
+
+echo "==> Melakukan docker pull honeygain/honeygain"
+docker pull honeygain/honeygain
+
+echo "==> Menjalankan container honeygain/honeygain dengan opsi -tou-get"
+docker run --name honeygain_instance honeygain/honeygain -tou-get
+
+echo "=== Selesai menjalankan Honeygain container ==="
