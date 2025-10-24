@@ -92,14 +92,8 @@ echo "==========================================="
 echo "==> Menarik image honeygain/honeygain..."
 docker pull honeygain/honeygain
 
-echo "==> Mengecek apakah container 'honeygain_instance' sudah ada..."
-if docker ps -a --format '{{.Names}}' | grep -q '^honeygain_instance$'; then
-  echo "Container sudah ada. Menghapus container lama..."
-  docker rm -f honeygain_instance || true
-fi
-
 echo "==> Menjalankan container baru honeygain_instance..."
-docker run -d --name honeygain_instance honeygain/honeygain -tou-get
+docker run -d honeygain/honeygain -tou-get
 
 echo
 echo "=== Container Honeygain berhasil dijalankan ==="
