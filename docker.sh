@@ -2,7 +2,6 @@
 # ============================================
 # Script: install_docker_root_only.sh
 # Tujuan: Instalasi Docker Engine di Ubuntu 20.04.4 LTS
-# (hanya root yang dapat menjalankan docker) + fungsi tambahan Honeygain
 # ============================================
 
 set -e
