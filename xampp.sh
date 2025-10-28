@@ -15,7 +15,6 @@ After=network.target
 Type=forking
 ExecStart=/opt/lampp/lampp start
 ExecStop=/opt/lampp/lampp stop
-PIDFile=/opt/lampp/var/log/lampp.pid
 # Jika ingin restart otomatis ketika gagal
 Restart=on-failure
 RestartSec=5s
